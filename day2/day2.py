@@ -15,7 +15,7 @@ def steady_check(sub):
 
 def safe_count_lists(sub):
 	for i in range(0, len(sub)-1):
-		if steady_check(sub) is True:
+		if steady_check(sub):
 			if abs(sub[i]-sub[i+1]) >= 1 and abs(sub[i]-sub[i+1]) <= 3:
 				continue
 			else:
@@ -44,3 +44,4 @@ for sub in mainlist:
 	print(errorcheck(sub))
 	if errorcheck(sub) is True:
 		recount +=1
+print(recount)
